@@ -13,19 +13,50 @@ O shell sort compara dois elementos em uma certa distância, se o elemento da di
 <br>
 
 ```Python
-[2, 1]
-tamanho [2, 1] = 2
-distancia = tamanho // 2 :1
-tamanho maior que 0?
-    sim -> j = distancia
-    j:0 menor que tamanho:1?
-        sim -> i = j:1 - distancia:1
-        i é 0 ou maior? 
-            sim -> [<i:0+distancia:1>:[2]] maior que [1]?
-                não -> troca de posição [1, 2]
-        j += 1
-    j:1 menor que tamanho:1?
-        não -> tamanho = tamanho // 2 :0
-tamanho:0 maior que 0?
-    não -> fim
+    [4, 2, 1]
+    tamanho [2, 4, 1] = 3
+    distancia = tamanho // 2 :1
+    tamanho maior que 0?
+        sim -> 
+        j = distancia:1 :1
+        j:1 menor que tamanho:3?
+            sim -> 
+            i = j:1 - distancia:1 :0
+            i:0 é 0 ou maior? 
+                sim -> 
+                [<i:0+distancia:1>:[4]] maior que [<i:1>:2]?
+                    não -> 
+                    troca [4, 2] de posição :[2, 4, 1]
+                    i = i:0 - distancia:1 :-1
+            i:-1 é 0 ou maior?
+                não -> 
+                para
+            j += 1 :2
+        j:2 menor que tamanho:3?
+            sim -> 
+            i = j:2 - distancia:1 :1
+            i:1 é 0 ou maior? 
+                sim -> 
+                [<i:1+distancia:1>:[1]] maior que [<i:1>:[4]]?
+                    não -> 
+                    troca [4, 1] de posição :[2, 1, 4]
+                    i = i:1 - distancia:1 :0
+            i:0 é 0 ou maior?
+                sim -> 
+                [<i:0+distancia:1>:[1]] maior que [<i:0>:[2]]?
+                    não -> 
+                    troca [2, 1] de posição :[1, 2, 4]
+                    i = i:0 - distancia:1 :-1
+            i:-1 é 0 ou maior?
+                não -> 
+                para
+            j += 1 :3
+        j:2 menor que tamanho:3?
+            não ->
+            para
+    tamanho:0 maior que 0?
+        não -> 
+        para
+    fim
+    [1, 2, 4]
 ```
